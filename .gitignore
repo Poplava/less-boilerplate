@@ -2,3 +2,4 @@
 node_modules
 src/less/*.css
 src/images/sprite
+npm-debug.log

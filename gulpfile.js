@@ -9,7 +9,7 @@ gulp.task('sprite', spriteTask);
 gulp.task('less', lessTask);
 gulp.task('less-sprite', ['sprite'], lessTask);
 gulp.task('assets', ['less-sprite']);
-gulp.task('watch', ['assets', 'jade'], watchTask);
+gulp.task('watch', ['assets'], watchTask);
 
 function spriteTask() {
     var defImg = Q.defer(),
