@@ -33,16 +33,18 @@ function spriteTask() {
     return Q.all([defImg.promise, defCss.promise]);
 }
 
-function lessTask() {
+function lessTask(done) {
     return gulp.src('src/less/*.less', { base: '.' })
         .pipe(less({
             relativeUrls: true,
             pretty: true
         }))
+        .on('error', done)
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
             cascade: false
         }))
+        .on('error', done)
         .pipe(gulp.dest('.'))
         .pipe(livereload());
 }
