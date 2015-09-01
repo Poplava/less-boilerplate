@@ -52,7 +52,7 @@ function lessTask(done) {
 function watchTask() {
     var lessPaths = [
             'src/less/*.less',
-            'src/components/**/*.less',
+            'src/less/components/**/*.less',
             'src/images/sprite/*.less'
         ],
         spritePaths = [
